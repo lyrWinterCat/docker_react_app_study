@@ -12,5 +12,21 @@ before_install:
 script:
   - docker run -e CI=true wintercat27/docker-react-app npm run test -- --coverage
 
-after_success:
-  - echo "notMust Test success"
+# after_success:
+#   - echo "notMust Test success"
+#여기까지 테스트까지의 코드
+
+# 해당 코드는 본인의 ElasticbeanStalk 참고해서 만들어야함. 나는 그냥 강의코드 가져옴
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-2"
+  app: "docker-react-app"
+  env: "DockerReactApp-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-2-972153559337"
+  bucket_path: "docker-react-app"
+  on:
+    branch: master
+
+
+
+
