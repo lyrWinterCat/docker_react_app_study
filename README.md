@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### commit error fixed
 Git commit check test
-if you lost daliy commit -> fix!
+>> all git commit is Fine!
